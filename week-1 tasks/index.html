@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="5">
     <link rel="stylesheet" href="style.css">
     <title>USER REGISTRATION</title>
 </head>
@@ -11,24 +10,24 @@
     <div class="main">
         <h1><b>User Registration Form</b></h1>
         <div class="form">
-            <form action="">
+            <form action="connect.php" method="post">
                 <label for="first">First Name: </label>
-                <input type="text" name="first" placeholder="First name" required><br>
+                <input type="text" name="firstname" value="firstname" placeholder="First name" required><br>
                 
                 <label for="last">Last Name: </label>
-                <input type="text" name="last" placeholder="Last name" required><br>
+                <input type="text" name="lastname" value="lastname" placeholder="Last name" required><br>
                 
                 <label for="email">E-mail: </label>
-                <input type="email" name="email" placeholder="Email address" required><br>
+                <input type="email" name="email" value="email" placeholder="Email address" required><br>
                 
                 <label for="pswd">Password: </label>
-                <input type="password" name="pswd" placeholder="Password" title="Password must contain 6 characters, at least contain one alphabet, one number, one symbol which includes ( @,#,$,%,&,*,_ )" required><br>
+                <input type="password" name="pswd" value="pswd" placeholder="Password" title="Password must contain 6 characters, at least contain one alphabet, one number, one symbol which includes ( @,#,$,%,&,*,_ )" required><br>
                 
                 <label for="retypepswd">Re-type Password: </label>
-                <input type="password" name="retypepswd" placeholder="Retype password" required><br>
+                <input type="password" name="retypepswd" value="retypepswd" placeholder="Retype password" required><br>
                 
                 <label for="mobile">Mobile no: </label>
-                <input type="text" name="mobile" maxlength="10" required><br>
+                <input type="text" name="mobile" value="mobile" maxlength="10" required><br>
                 
                 <label for="gender">Gender: </label>
                 <select id="gender" name="gender" required>
