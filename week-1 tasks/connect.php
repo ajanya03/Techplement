@@ -21,7 +21,7 @@ else{
     $gender = $_POST['gender'];
 
 
-$sql = "INSERT INTO WeekOneTask(firstName, lastName, email, pswd, mobile, gender)VALUES(?,?,?,?,?,?,?)"
+$sql = "INSERT INTO WeekOneTask(firstName, lastName, email, pswd, mobile, gender)VALUES(?,?,?,?,?,?)"
 
 $stmt = mysqli_stmt_init($conn);
 
@@ -29,10 +29,14 @@ if( ! mysqli_stmt_prepare($stmt,$sql) ){
     die(mysqli_error($conn));
 }
 
-mysqli_stmt_bind_param($stmt, "ssdddis", $firstname, $lastname, $email, $pswd, $mobile, $gender);
+mysqli_stmt_bind_param($stmt, "ssssss", $firstname, $lastname, $email, $pswd, $mobile, $gender);
 
 mysqli_stmt_execute($stmt);
 
-echo "Data Saved Succesfully";
+die("Data Saved Succesfully");
+
+header("Location: thankyou.html");
+
+exit();
 
 ?>
