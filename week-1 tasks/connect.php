@@ -17,12 +17,11 @@ else{
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];
     $pswd = $_POST['pswd'];
-    $retypepswd = $_POST['retypepswd'];
     $mobile = $_POST['mobile'];
     $gender = $_POST['gender'];
 
 
-$sql = "INSERT INTO WeekOneTask(firstName, lastName, email, pswd, retypepswd, mobile, gender)VALUES(?,?,?,?,?,?,?)"
+$sql = "INSERT INTO WeekOneTask(firstName, lastName, email, pswd, mobile, gender)VALUES(?,?,?,?,?,?,?)"
 
 $stmt = mysqli_stmt_init($conn);
 
@@ -30,7 +29,7 @@ if( ! mysqli_stmt_prepare($stmt,$sql) ){
     die(mysqli_error($conn));
 }
 
-mysqli_stmt_bind_param($stmt, "ssdddis", $firstname, $lastname, $email, $pswd, $retypepswd, $mobile, $gender);
+mysqli_stmt_bind_param($stmt, "ssdddis", $firstname, $lastname, $email, $pswd, $mobile, $gender);
 
 mysqli_stmt_execute($stmt);
 
