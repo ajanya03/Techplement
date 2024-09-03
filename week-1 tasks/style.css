@@ -8,8 +8,6 @@ body {
     background-color: #f3f3f3;
     display: flex;
     flex-direction: column; 
-    margin: 0;
-    padding: 0;
 }
 
 .main {
@@ -18,7 +16,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     padding: 20px;
     width: 300px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 label {
@@ -40,6 +38,9 @@ select {
     border-radius: 5px;
 }
 
+input::placeholder{
+    color: #888;
+}
 button[type="submit"] {
     padding: 15px;
     border-radius: 10px;
@@ -69,6 +70,10 @@ footer a {
     text-decoration: none;
     margin: 0 10px;
     transition: color 0.3s ease;
+}
+
+footer a:hover{
+    color: #ddd;
 }
 
 h1 {
