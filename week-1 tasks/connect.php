@@ -1,3 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="thankyou.css">
+    <title>THANK YOU</title>
+</head>
+<body>
+
+    <div class="thank-you-container">
+        <h1>Thank You!</h1>
+        <p>Your submission has been received. We appreciate your time and effort!</p>
+        <a href="index.html" class="back-home-btn">Back to Home</a>
+    </div>
+
+
 <?php
 
 $servername = "localhost";
@@ -5,12 +22,9 @@ $username = "root";
 $password = "";
 $dbname = "techplement";
 
-$conn = mysqli_connect($servername,$username,$password,$dbname)
+$conn = mysqli_connect($servername,$username,$password,$dbname);
 if(!$conn){
     die("Connection Failed : ".mysqli_connect_error());
-}
-else{
-    die("Connected successfully")
 }
 
     $firstname = $_POST['firstname'];
@@ -21,7 +35,7 @@ else{
     $gender = $_POST['gender'];
 
 
-$sql = "INSERT INTO WeekOneTask(firstName, lastName, email, pswd, mobile, gender)VALUES(?,?,?,?,?,?)"
+$sql = "INSERT INTO WeekOneTask(firstName, lastName, email, pswd, mobile, gender)VALUES(?,?,?,?,?,?)";
 
 $stmt = mysqli_stmt_init($conn);
 
@@ -33,10 +47,13 @@ mysqli_stmt_bind_param($stmt, "ssssss", $firstname, $lastname, $email, $pswd, $m
 
 mysqli_stmt_execute($stmt);
 
-die("Data Saved Succesfully");
+#die("Data Saved Succesfully");
 
-header("Location: thankyou.html");
+
 
 exit();
 
 ?>
+
+</body>
+</html>
